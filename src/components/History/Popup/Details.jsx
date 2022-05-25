@@ -1,12 +1,25 @@
+import { faL } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import "./Popup.css";
 
 export default function Details(props) {
   const info = JSON.parse(localStorage.getItem("history")) ?? [];
   const trigger = props.trigger;
+  const setTrigger = props.setTrigger;
   const index = props.index;
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+
+  // const handleOnClick_Delete = () => {
+  //   const text = "Do you want to delete?";
+  //   if (window.confirm(text) == true) {
+  //   } else {
+  //   }
+  // };
+
+  const handleOnClick_OK = () => {
+    setTrigger(false);
+  };
 
   return trigger ? (
     <div className="popup">
@@ -31,8 +44,12 @@ export default function Details(props) {
         Created on: <div className="data">{info[index].dateCreated}</div>
       </div>
       <div className="btn-section">
-        <button className="btn">Delete</button>
-        <button className="main-btn">OK</button>
+        {/* <button className="btn" onClick={handleOnClick_Delete}>
+          Delete
+        </button> */}
+        <button className="main-btn" onClick={handleOnClick_OK}>
+          OK
+        </button>
       </div>
     </div>
   ) : (

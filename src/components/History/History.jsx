@@ -6,6 +6,7 @@ export default function History() {
   // const [isActive, setIsActive] = useState(false);
   const info = JSON.parse(localStorage.getItem("history")) ?? [];
   const [toggle, setToggle] = useState(false);
+  const [index, setIndex] = useState("");
 
   return (
     <div>
@@ -19,13 +20,19 @@ export default function History() {
             Date of reservation: {info[0].date.month}-{info[0].date.day}-
             {info[0].date.year}
           </div>
-          <Details trigger={toggle} index={0} />
         </div>
         <div>
           <h2 className="title-h2">Older payments</h2>
           <div className="older-payments">
-            {info.slice(1).map((item, index) => (
-              <div className="payment-info" key={index}>
+            {info.slice(1).map((item, i) => (
+              <div
+                className="payment-info"
+                key={i}
+                onClick={() => {
+                  setToggle(true);
+                  setIndex(i + 1);
+                }}
+              >
                 <div>Name: {item.name}</div>
                 <div>Phone number: {item.phone}</div>
                 <div>
@@ -36,6 +43,7 @@ export default function History() {
             ))}
           </div>
         </div>
+        <Details trigger={toggle} setTrigger={setToggle} index={index} />
       </div>
     </div>
   );
