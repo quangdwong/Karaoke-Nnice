@@ -30,6 +30,10 @@ export default function Details(props) {
       <div>
         Created on: <div className="data">{info[index].dateCreated}</div>
       </div>
+      <div className="btn-section">
+        <button className="btn">Delete</button>
+        <button className="main-btn">OK</button>
+      </div>
     </div>
   ) : (
     ""
