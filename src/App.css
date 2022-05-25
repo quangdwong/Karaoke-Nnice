@@ -1,3 +1,11 @@
+:root {
+  --gradient: radial-gradient(
+    circle,
+    rgba(231, 174, 200, 1) 0%,
+    rgba(159, 183, 213, 1) 100%
+  );
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +42,37 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+h1 {
+  font-size: 76px;
+  text-align: center;
+  font-weight: 16px;
+  margin-bottom: 80px;
+  background: rgb(231, 174, 200);
+  background: linear-gradient(
+    45deg,
+    rgba(231, 174, 200, 1) 0%,
+    rgba(159, 183, 213, 1) 100%
+  );
+  background-clip: text;
+  background-size: 300%;
+  color: transparent;
+  cursor: default;
+  animation: bg-animation 5s ease-in-out infinite alternate;
+}
+
+.text {
+  cursor: default;
+  /* text-shadow: 2px 2px 10px black; */
+}
+
+@keyframes bg-animation {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
   }
 }

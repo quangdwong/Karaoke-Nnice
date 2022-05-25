@@ -1,0 +1,54 @@
+.dropdown {
+  position: relative;
+  user-select: none;
+}
+
+.datefield {
+  margin-bottom: 30px;
+}
+
+.dropdown-btn {
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  text-align: left;
+  width: 265px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  cursor: default;
+}
+
+.dropdown-content {
+  margin-top: 5px;
+  position: absolute;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  max-height: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 267px;
+  text-align: left;
+  border-radius: 5px;
+  z-index: 1;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-content::-webkit-scrollbar {
+  display: none;
+}
+
+.dropdown-item {
+  padding: 5;
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,8 @@
+.content {
+  text-align: center;
+}
+
+.members-list {
+  list-style-type: none;
+  cursor: default;
+}
