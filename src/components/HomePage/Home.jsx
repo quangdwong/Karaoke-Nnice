@@ -8,14 +8,14 @@ export default function Home() {
       <h1>Welcome, from Nnice</h1>
       <div className="panel panel1">
         <div>
-          <div className="text">
+          <h2 className="text">
             Welcome to the world of karaoke. We’re here to let go with you and
             create moments that everyone enjoys and remembers forever. Show up.
             Sing the night away. And dance your way out.
-          </div>
+          </h2>
         </div>
-        <NavLink className="book__btn" to="/book">
-          Book Online Now
+        <NavLink to="/book">
+          <button className="main-btn">Book Online Now</button>
         </NavLink>
       </div>
       {/* <div>

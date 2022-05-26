@@ -17,39 +17,37 @@ export default function Details(props) {
   //   }
   // };
 
-  const handleOnClick_OK = () => {
-    setTrigger(false);
-  };
-
   return trigger ? (
-    <div className="popup">
-      <h2>Details</h2>
-      <div>
-        Name: <div className="data">{info[index].name}</div>
-      </div>
-      <br />
-      <div>
-        Phone number: <div className="data">{info[index].phone}</div>
-      </div>
-      <br />
-      <div>
-        Date:{" "}
-        <div className="data">
-          {info[index].date.month}-{info[index].date.day}-
-          {info[index].date.year}
+    <div className="background" onClick={() => setTrigger(false)}>
+      <div className="popup">
+        <h2>Details</h2>
+        <div>
+          Name: <div className="data">{info[index].name}</div>
         </div>
-      </div>
-      <br />
-      <div>
-        Created on: <div className="data">{info[index].dateCreated}</div>
-      </div>
-      <div className="btn-section">
-        {/* <button className="btn" onClick={handleOnClick_Delete}>
-          Delete
-        </button> */}
-        <button className="main-btn" onClick={handleOnClick_OK}>
-          OK
-        </button>
+        <br />
+        <div>
+          Phone number: <div className="data">{info[index].phone}</div>
+        </div>
+        <br />
+        <div>
+          Date:{" "}
+          <div className="data">
+            {info[index].date.month}-{info[index].date.day}-
+            {info[index].date.year}
+          </div>
+        </div>
+        <br />
+        <div>
+          Created on: <div className="data">{info[index].dateCreated}</div>
+        </div>
+        <div className="btn-section">
+          {/* <button className="btn" onClick={handleOnClick_Delete}>
+            Delete
+          </button> */}
+          <button className="main-btn" onClick={() => setTrigger(false)}>
+            OK
+          </button>
+        </div>
       </div>
     </div>
   ) : (

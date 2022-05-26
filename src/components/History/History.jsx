@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./History.css";
 import Details from "./Popup/Details";
+import { Block_Newest, Block_Older } from "./Block/Block";
 
 export default function History() {
-  // const [isActive, setIsActive] = useState(false);
   const info = JSON.parse(localStorage.getItem("history")) ?? [];
   const [toggle, setToggle] = useState(false);
   const [index, setIndex] = useState("");
@@ -14,33 +14,28 @@ export default function History() {
       <div className="payment-list">
         <div className="newest-payment">
           <h2 className="title-h2">Newest payment</h2>
-          <div className="payment-info" onClick={() => setToggle(true)}>
-            Name: {info[0].name} <br />
-            Phone numbmer: {info[0].phone} <br />
-            Date of reservation: {info[0].date.month}-{info[0].date.day}-
-            {info[0].date.year}
-          </div>
+          {info.length === 0 ? (
+            "Looks like there is nothing here yet!"
+          ) : (
+            <Block_Newest
+              info={info}
+              setToggle={setToggle}
+              setIndex={setIndex}
+            />
+          )}
         </div>
         <div>
           <h2 className="title-h2">Older payments</h2>
           <div className="older-payments">
-            {info.slice(1).map((item, i) => (
-              <div
-                className="payment-info"
-                key={i}
-                onClick={() => {
-                  setToggle(true);
-                  setIndex(i + 1);
-                }}
-              >
-                <div>Name: {item.name}</div>
-                <div>Phone number: {item.phone}</div>
-                <div>
-                  Date of reservation: {item.date.month}-{item.date.day}-
-                  {item.date.year}
-                </div>
-              </div>
-            ))}
+            {info.length === 0 ? (
+              "No older payments"
+            ) : (
+              <Block_Older
+                info={info}
+                setToggle={setToggle}
+                setIndex={setIndex}
+              />
+            )}
           </div>
         </div>
         <Details trigger={toggle} setTrigger={setToggle} index={index} />

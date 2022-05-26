@@ -1,0 +1,84 @@
+.contact-container {
+  padding: 0px 40px;
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.contact-container .outline {
+  width: 500px;
+}
+
+.contact-container .review_field form {
+  display: block;
+}
+
+.contact-container .review_field form .input {
+  width: 350px;
+  height: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  margin-bottom: 30px;
+}
+
+.contact-container .review_field form .ta_review {
+  height: 100px;
+}
+
+.contact-container .review_field form .input::placeholder {
+  color: white;
+}
+
+.ta_review {
+  resize: none;
+}
+
+.review_submit-btn {
+}
+
+.d_review_submit-btn {
+  text-align: right;
+}
+
+.review_component {
+  position: relative;
+
+  display: block;
+}
+
+.lbl_ip_review {
+  position: absolute;
+  left: 5%;
+  top: -15%;
+  color: white;
+  width: fit-content;
+  padding: 0 3px;
+  display: block;
+  font-size: 12px;
+  border-radius: 2px;
+  background-color: linear-gradient(
+    45deg,
+    rgba(76, 47, 129, 1) 0%,
+    rgba(88, 56, 117, 1) 50%,
+    rgba(134, 77, 144, 1) 100%
+  );
+  backdrop-filter: blur(90px);
+  animation: bg-animation 10s ease-in-out infinite alternate;
+  background-size: 500%;
+}
+
+#ip_review-box {
+  height: 100px;
+  vertical-align: top;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  resize: none;
+}
+
+.lbl_ip_review-box {
+  top: -7%;
+}

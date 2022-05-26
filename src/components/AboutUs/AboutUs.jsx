@@ -5,12 +5,12 @@ export default function AboutUs() {
   return (
     <div className="content">
       <h1>Hi ;)</h1>
-      <div className="text">
+      <h2 className="text">
         This website is a product created to demonstrate the ideas for a karaoke
         website of our project group.
         <br />
         We hope you like our hard work.
-      </div>
+      </h2>
       <ul className="members-list">
         Lecturer
         <li>Mr. Quoc Viet Nguyen</li>
