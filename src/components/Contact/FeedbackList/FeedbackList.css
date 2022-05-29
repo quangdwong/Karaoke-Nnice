@@ -1,0 +1,46 @@
+.feedback-list_background {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.overlay_ground,
+.feedback-list_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.feedback-list_container {
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 50%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.feedback-list_block {
+  position: relative;
+  width: 100%;
+}
+
+.feedback-list_content::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  margin-top: 2px;
+}

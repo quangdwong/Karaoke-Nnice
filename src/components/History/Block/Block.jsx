@@ -16,7 +16,7 @@ export function Block_Newest(props) {
       >
         Name: {info[0].name} <br />
         Phone numbmer: {info[0].phone} <br />
-        Date of reservation: {info[0].date.month}-{info[0].date.day}-
+        Date of reservation: {info[0].date.month}/{info[0].date.day}/
         {info[0].date.year}
       </div>
     </div>
@@ -40,7 +40,7 @@ export function Block_Older(props) {
       <div>Name: {item.name}</div>
       <div>Phone number: {item.phone}</div>
       <div>
-        Date of reservation: {item.date.month}-{item.date.day}-{item.date.year}
+        Date of reservation: {item.date.month}/{item.date.day}/{item.date.year}
       </div>
     </div>
   ));

@@ -7,19 +7,19 @@ export default function Day({ month, setDay }) {
   const [isActive, setIsActive] = useState(false);
   let options;
 
-  if (month === "February") {
+  if (month === "2") {
     options = [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
       22, 23, 24, 25, 26, 27, 28,
     ];
   } else if (
-    month === "January" ||
-    month === "March" ||
-    month === "May" ||
-    month === "July" ||
-    month === "August" ||
-    month === "October" ||
-    month === "December"
+    month === "1" ||
+    month === "3" ||
+    month === "5" ||
+    month === "7" ||
+    month === "8" ||
+    month === "10" ||
+    month === "12"
   ) {
     options = [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,

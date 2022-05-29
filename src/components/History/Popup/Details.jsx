@@ -18,7 +18,8 @@ export default function Details(props) {
   // };
 
   return trigger ? (
-    <div className="background" onClick={() => setTrigger(false)}>
+    <div className="background">
+      <div className="overlay" onClick={() => setTrigger(false)}></div>
       <div className="popup">
         <h2>Details</h2>
         <div>
@@ -32,21 +33,24 @@ export default function Details(props) {
         <div>
           Date:{" "}
           <div className="data">
-            {info[index].date.month}-{info[index].date.day}-
+            {info[index].date.month}/{info[index].date.day}/
             {info[index].date.year}
           </div>
         </div>
         <br />
         <div>
-          Created on: <div className="data">{info[index].dateCreated}</div>
+          Created on:{" "}
+          <div className="data">
+            {info[index].dateCreated} - {info[index].timeCreated}
+          </div>
         </div>
         <div className="btn-section">
           {/* <button className="btn" onClick={handleOnClick_Delete}>
-            Delete
-          </button> */}
-          <button className="main-btn" onClick={() => setTrigger(false)}>
+              Delete
+            </button> */}
+          {/* <button className="main-btn" onClick={() => setTrigger(false)}>
             OK
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

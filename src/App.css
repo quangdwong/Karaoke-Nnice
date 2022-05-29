@@ -76,3 +76,35 @@ h1 {
     background-position: right;
   }
 }
+
+.main-btn,
+.btn {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: all 0.5s ease;
+}
+
+.main-btn:hover,
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.main-btn {
+  width: fit-content;
+  min-width: 80px;
+  height: 30px;
+  background-size: 300%;
+  background: linear-gradient(
+    45deg,
+    rgba(231, 174, 200, 0.7) 0%,
+    rgba(159, 183, 213, 0.7) 100%
+  );
+  margin: 0;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+}

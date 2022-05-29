@@ -27,7 +27,7 @@ export default function History() {
         <div>
           <h2 className="title-h2">Older payments</h2>
           <div className="older-payments">
-            {info.length === 0 ? (
+            {info.length === 0 || info.length === 1 ? (
               "No older payments"
             ) : (
               <Block_Older

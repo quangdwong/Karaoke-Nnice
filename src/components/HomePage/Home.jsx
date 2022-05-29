@@ -14,7 +14,7 @@ export default function Home() {
             Sing the night away. And dance your way out.
           </h2>
         </div>
-        <NavLink to="/book">
+        <NavLink className="book__btn" to="/book">
           <button className="main-btn">Book Online Now</button>
         </NavLink>
       </div>

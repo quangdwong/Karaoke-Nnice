@@ -6,7 +6,7 @@ import Month from "../DMY/Month.jsx";
 import Year from "../DMY/Year.jsx";
 
 export default function Book() {
-  let navigate = useNavigate("");
+  const navigate = useNavigate("");
   const [list, setList] = useState(
     JSON.parse(localStorage.getItem("history")) ?? []
   );
@@ -25,6 +25,7 @@ export default function Book() {
           phone: phone,
           date: { day: day, month: month, year: year },
           dateCreated: new Date().toLocaleDateString(),
+          timeCreated: new Date().toLocaleTimeString(),
         };
         const updatedHistory = [receipt, ...prev];
 
@@ -37,6 +38,7 @@ export default function Book() {
         setMonth("");
         setDay("");
         setYear("");
+
         return updatedHistory;
       });
     } else {
@@ -81,7 +83,7 @@ export default function Book() {
           <button
             className="main-btn"
             onClick={() => {
-              const isFilledPage1 = (() => {
+              (() => {
                 if (name === "" || phone === "") {
                   alert("Please fill in every input");
                   return false;
