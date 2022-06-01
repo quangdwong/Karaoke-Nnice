@@ -84,6 +84,12 @@
 .social-link {
   display: flex;
   align-items: baseline;
+  width: fit-content;
+}
+
+.social-link:hover {
+  transform: scale(1);
+  cursor: pointer;
 }
 
 .social-link > p {

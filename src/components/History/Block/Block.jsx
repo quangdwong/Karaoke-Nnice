@@ -28,20 +28,25 @@ export function Block_Older(props) {
   const setToggle = props.setToggle;
   const setIndex = props.setIndex;
 
-  return info.slice(1).map((item, i) => (
-    <div
-      className="payment-info"
-      key={i}
-      onClick={() => {
-        setToggle(true);
-        setIndex(i + 1);
-      }}
-    >
-      <div>Name: {item.name}</div>
-      <div>Phone number: {item.phone}</div>
-      <div>
-        Date of reservation: {item.date.month}/{item.date.day}/{item.date.year}
-      </div>
+  return (
+    <div className="older-payments">
+      {info.slice(1).map((item, i) => (
+        <div
+          className="payment-info"
+          key={i}
+          onClick={() => {
+            setToggle(true);
+            setIndex(i + 1);
+          }}
+        >
+          <div>Name: {item.name}</div>
+          <div>Phone number: {item.phone}</div>
+          <div>
+            Date of reservation: {item.date.month}/{item.date.day}/
+            {item.date.year}
+          </div>
+        </div>
+      ))}
     </div>
-  ));
+  );
 }

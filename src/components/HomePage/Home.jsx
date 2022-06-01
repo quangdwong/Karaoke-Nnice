@@ -15,7 +15,7 @@ export default function Home() {
           </h2>
         </div>
         <NavLink className="book__btn" to="/book">
-          <button className="main-btn">Book Online Now</button>
+          <button className="main-btn">Book Now</button>
         </NavLink>
       </div>
       {/* <div>

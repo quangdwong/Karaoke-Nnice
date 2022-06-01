@@ -10,8 +10,8 @@ body {
   background: rgb(202, 114, 154);
   background: radial-gradient(
     circle,
-    rgba(202, 114, 154, 1) 0%,
-    rgba(80, 122, 173, 1) 100%
+    rgba(202, 114, 154, 0.9) 0%,
+    rgba(80, 122, 173, 0.9) 100%
   );
   animation: bg-animation 10s ease-in-out infinite alternate;
   background-size: 500%;

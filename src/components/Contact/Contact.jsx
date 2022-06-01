@@ -13,6 +13,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState("");
   const [showPreviousFeedbacks, setShowPreviousFeedbacks] = useState(false);
+  const [trigger, setTrigger] = useState(false);
 
   function handleOnSubmit() {
     if (name !== "" && phone !== "" && email !== "" && feedback !== "") {
@@ -34,6 +35,7 @@ export default function Contact() {
         setPhone("");
         setEmail("");
         setFeedback("");
+        setTrigger(true);
 
         return updatedFeedbackList;
       });
@@ -45,7 +47,7 @@ export default function Contact() {
   }
 
   function alertWhenFilled() {
-    alert("Your feedback was received. Thank you!");
+    if (trigger === true) alert("Your feedback was received. Thank you!");
   }
 
   return (
@@ -59,7 +61,7 @@ export default function Contact() {
             That would help us a lot to grow our business. 🤍 <br />
           </h2>
           <a
-            href="https://www.facebook.com/NniceKaraoke/"
+            to="https://www.facebook.com/NniceKaraoke/"
             className="social-link"
             target="_blank"
           >

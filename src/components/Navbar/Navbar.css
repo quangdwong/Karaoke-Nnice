@@ -35,7 +35,7 @@ a + a {
 
 .active-nav {
   position: relative;
-  color: rgba(231, 174, 200, 1);
+  color: #d653af;
 }
 
 .active-nav::after {
@@ -47,12 +47,7 @@ a + a {
   height: 1px;
   bottom: 0;
   left: 0;
-  background: rgb(231, 174, 200);
-  background: linear-gradient(
-    45deg,
-    rgba(231, 174, 200, 1) 0%,
-    rgba(159, 183, 213, 1) 100%
-  );
+  background: #d653af;
   margin: 0 auto;
   animation: navbar-index 0.2s ease-in-out;
   border-radius: 10px;
