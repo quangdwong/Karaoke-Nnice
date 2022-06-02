@@ -12,6 +12,12 @@ export default function Navbar() {
         Home
       </NavLink>
       <NavLink
+        to="/general"
+        className={(navData) => (navData.isActive ? "active-nav" : "")}
+      >
+        General
+      </NavLink>
+      <NavLink
         to="/book"
         className={(navData) => (navData.isActive ? "active-nav" : "")}
       >

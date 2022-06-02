@@ -7,6 +7,7 @@ import "./App.css";
 import AboutUs from "./components/AboutUs/AboutUs";
 import News from "./components/News/News";
 import Contact from "./components/Contact/Contact";
+import General from "./components/General/General";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/general" element={<General />}></Route>
           <Route path="/book" element={<Book />}></Route>
           <Route path="/history" element={<History />}></Route>
           <Route path="/news" element={<News />}></Route>

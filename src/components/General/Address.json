@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Nnice 32 Nguyen Son",
+    "address": "32 Nguyen Son, D.Tan Phu",
+    "phone": ["(028) 3 8611 555", "(028) 3 8611 777"]
+  },
+  {
+    "name": "Nnice 121 Vo Thi Sau",
+    "address": "121 Vo Thi Sau, D.3",
+    "phone": ["(028) 3 820 6231", "(028) 3 820 7315"]
+  },
+  {
+    "name": "Nnice Phan Van Tri",
+    "address": "524 Phan Van Tri, D.Go Vap",
+    "phone": ["(028) 3 811 5828", "(028) 3 811 0459"]
+  },
+  {
+    "name": "Nnice Nguyen Thi Minh Khai",
+    "address": "340 Nguyen Thi Minh Khai, D.3",
+    "phone": ["(028) 3 834 3784", "(028) 3 834 1676"]
+  },
+  {
+    "name": "Nnice Phan Xich Long",
+    "address": "230 Phan Xich Long, D.Phu Nhuan",
+    "phone": ["(028) 3 517 0046", "(028) 3 517 0122"]
+  }
+]

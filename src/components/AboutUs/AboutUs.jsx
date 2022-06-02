@@ -23,6 +23,9 @@ export default function AboutUs() {
         <br />
         Subject
         <li>Information Technology Project Management</li>
+        <br />
+        <br />
+        <li>University of Information Technology</li>
       </ul>
     </div>
   );

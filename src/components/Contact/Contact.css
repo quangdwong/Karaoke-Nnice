@@ -24,7 +24,7 @@
 .contact-container .feedback_field form .input {
   width: 350px;
   height: 30px;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   background-color: transparent;
   margin-bottom: 30px;
 }

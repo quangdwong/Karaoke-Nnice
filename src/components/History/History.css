@@ -3,6 +3,7 @@
   /* padding-left: 105px; */
   width: 84%;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .title-h2 {
@@ -10,6 +11,7 @@
   width: fit-content;
   padding-bottom: 5px;
   cursor: default;
+  margin-top: 0px;
   /* height: 35px; */
 }
 
