@@ -4,5 +4,6 @@
 
 .members-list {
   list-style-type: none;
+  margin-top: -20px;
   cursor: default;
 }
