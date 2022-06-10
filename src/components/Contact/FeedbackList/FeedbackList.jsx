@@ -17,20 +17,22 @@ export default function FeedbackList(props) {
       ></div>
       <div className="feedback-list_container">
         <h2>Your previous feedbacks</h2>
-        {info.length === 0
-          ? "You have not created any feedback."
-          : info.map((item, index) => (
-              <div
-                key={index}
-                className="feedback-list_block"
-                onClick={() => setToggle(!toggle)}
-              >
-                <div className="feedback-list_content">
-                  {item.name}, {item.dateCreated} - {item.timeCreated}
-                  <div className="data">{item.feedback} </div>
+        <div className="feedback-list_mainboard">
+          {info.length === 0
+            ? "You have not created any feedback."
+            : info.map((item, index) => (
+                <div
+                  key={index}
+                  className="feedback-list_block"
+                  onClick={() => setToggle(!toggle)}
+                >
+                  <div className="feedback-list_content">
+                    {item.name}, {item.dateCreated} - {item.timeCreated}
+                    <div className="data">{item.feedback} </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+        </div>
       </div>
     </div>
   ) : (

@@ -39,15 +39,11 @@ export default function Contact() {
 
         return updatedFeedbackList;
       });
-    } else {
+    } /* else {
       alert(
         "You have to fill out everything to send a feedback, unfortunately :("
       );
-    }
-  }
-
-  function alertWhenFilled() {
-    if (trigger === true) alert("Your feedback was received. Thank you!");
+    } */
   }
 
   return (
@@ -138,8 +134,19 @@ export default function Contact() {
                 type="button"
                 className="main-btn feedback_submit-btn"
                 onClick={() => {
-                  handleOnSubmit();
-                  alertWhenFilled();
+                  if (
+                    name !== "" &&
+                    phone !== "" &&
+                    email !== "" &&
+                    feedback !== ""
+                  ) {
+                    alert("Your feedback was received! Thank you.");
+                    handleOnSubmit();
+                  } else {
+                    alert(
+                      "You have to fill out everything to send a feedback, unfortunately :("
+                    );
+                  }
                 }}
               >
                 OK
